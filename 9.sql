@@ -1,3 +1,4 @@
+--Создание и использование триггеров
 drop trigger if exists trig
 go
 
