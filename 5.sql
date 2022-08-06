@@ -1,4 +1,4 @@
---Тип груза,вес груза, имя и фамилия заказчика,дату прибытия, город прибытия
+--РЎРѕР·РґР°РЅРёРµ Рё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёР№
 drop view if exists view_1
 go
 
@@ -25,7 +25,7 @@ AND v.weight>5
 
 
 
---вывести корабль , владельца,имя и фамилию капитана и кол-во часов в пути(за все маршруты)
+
 drop view if exists view_2
 go
 
@@ -52,7 +52,7 @@ order by diff
 
 
 
---Вывести сумму тонн груза за каждый рейс,отправляющийся от Бара,дату отправления и номер рейса
+
 drop view if exists view_3
 go
 
@@ -75,7 +75,6 @@ create view view_3 as
 select (((select cast((count(SUM) from view_3) as DEC(5,2)))/(select count(weight) from goods))*100) as count
 select (((select count(sum) from view_3)/(select count(weight) from goods))*100) as count
 
---фамилии работников в алфавитном порядке, их имена,профессия,фамилия владельца корабля, название корабля
 drop view if exists view_4
 go
 create view view_4 as
