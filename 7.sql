@@ -1,4 +1,4 @@
---
+--Управление доступом
 CREATE LOGIN test_login
     WITH PASSWORD = '1234'; 
 CREATE USER test_user FOR LOGIN test_login
